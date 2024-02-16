@@ -7,8 +7,9 @@ namespace Mod_2_Lesson_4_Exc_1
     {
         public static void Main(string[] args)
 
-        //declare personal details
-
+        // Typy danych. Zad 1. Stworz program, w ktorym zadeklarujesz zmienne dotyczace danych pracownika firmy:
+        // imie, nazwisko, pesel nr pracownika itp...
+        // Data types. EXC 1. Declare variables related to company employee data
         {
             Console.WriteLine("Name:");
             {
@@ -43,7 +44,10 @@ namespace Mod_2_Lesson_4_Exc_1
     }
 }
 
-//Task 2. 
+
+// Typy danych. Zad 2. Napisz program, w którym stworzysz 3 zmienne z jedną literą,
+// a następnie wypiszesz je w odwrotnej kolejności niż zostały zadeklarowane
+// Data types. EXC 2. Create 3 variables with one letter and then print them in the reverse order from which they were declared.
 
 {
     char variables1 = 'a';
@@ -53,7 +57,9 @@ namespace Mod_2_Lesson_4_Exc_1
     Console.WriteLine($"{variables3}, {variables2}, {variables1}");
 }
 
-//Task 3. Calculate the length of the diagonals
+// Typy danych. Zad 3.Napisz program, który na podstawie podanej szerokości i długości prostokąta wyliczy długość przekątnej.
+// (Aby, obliczyć kwadrat liczby użyj metody Math.Pow())
+// Data types. EXC 3. Calculate the length of the diagonals using the method Math.Pow())
 
 {
     double height = 4, length = 6.5, diagonal;
@@ -61,7 +67,13 @@ namespace Mod_2_Lesson_4_Exc_1
     Console.WriteLine($"Diagonal: {diagonal}");
 }
 
-//Task 4. Two numerical variables and one text variable
+// Typy danych. Zad 4. Napisz program w którym stworzysz 2 zmienne liczbowe, oraz jedną tekstową,
+// a następnie przypiszesz im następujące wartości:
+// a.10
+// b.Szkoła Dotneta
+// c.12,5
+// Pamiętaj o użyciu poprawnych typów danych
+// Data types. EXC 4. Two numerical variables and one text variable
 
 {
     string text = "Szkoła Dotneta";
@@ -69,7 +81,11 @@ namespace Mod_2_Lesson_4_Exc_1
     double numberDouble = 12.5;
 }
 
-//Task 5. Personal details
+// Typy danych. Zad 3. Napisz program w którym poprosisz użytkownika o jego dane personalne:
+// Imię, nazwisko, numer telefonu, adres email, wzrost, waga (np. 85,7), itp
+// (postaraj się wymyślić jak najwięcej) i spróbuj przekonwertować odpowiedź
+// do odpowiedniego typu danych używając metody: typDanych.Parse(odpowiedźOdUżytkownika). 
+// Data types. EXC 3. Personal details using data type.Parse()
 
 {
     Console.WriteLine("Please enter your Name:");

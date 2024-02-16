@@ -6,7 +6,8 @@ namespace Mod_2_Lesson_8_Task_1_10
     {
         public static void Main(string[] args)
 
-        //Iteration statements EXC 1 Prime numbers
+        // Petle. Zad 1. Napisz program, który sprawdzi ile jest liczb pierwszych w zakresie 0 –100.
+        // Loops. EXC 1. Check how many prime numbers there are in the range 0–100.
         {
             int PrimeNumber;
             for (int i = 2; i <= 100; i++)
@@ -24,8 +25,8 @@ namespace Mod_2_Lesson_8_Task_1_10
         }
     }
 }
-
-//Iteration statements EXC 2 Find all even numbers from 0 to 1000
+// Petle. Zad 2. Napisz program,w którym za pomocą pętli do...while znajdziesz wszystkie liczby parzyste z zakresu 0 –1000.
+// Loops. EXC 2. Use the while loop to find all even numbers in the range 0–1000
 {
     int evenNumber = 0;
     do
@@ -38,8 +39,8 @@ namespace Mod_2_Lesson_8_Task_1_10
     }
     while (evenNumber <= 1000);
 }
-
-//Iteration statements EXC 3 Fibonacci Numbers
+// Petle. Zad 3.Napisz program, który dla liczb od 1 do 20 wyświetli na ekranie ich 3 potęgę.
+// Loops. EXC 3.
 {
     {
         Console.Write("Enter Fibonacci Number: ");
@@ -79,4 +80,14 @@ namespace Mod_2_Lesson_8_Task_1_10
             Console.WriteLine();
         }
     }
+}
+// Petle. Zad 5.Napisz program, który dla liczb od 1 do 20 wyświetli na ekranie ich 3 potęgę.
+// Loops. EXC 5.Numbers from 1 to 20 display their 3rd power on the screen.
+{
+    Console.WriteLine("Numbers from 1 to 20 are their 3rd power:");
+    for (int i = 1; i <= 20; i++)
+    {
+        Console.Write(Math.Pow(i, 3) + ", ");
+    }
+    Console.WriteLine();
 }
