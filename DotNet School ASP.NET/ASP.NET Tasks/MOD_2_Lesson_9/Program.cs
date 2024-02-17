@@ -39,8 +39,8 @@ namespace Mod_2_Lesson_8_Task_1_10
     }
     while (evenNumber <= 1000);
 }
-// Petle. Zad 3.Napisz program, który dla liczb od 1 do 20 wyświetli na ekranie ich 3 potęgę.
-// Loops. EXC 3.
+// Petle. Zad 3. Napisz program, który zaimplementuje ciąg Fibonacciego i wyświetli go na ekranie.
+// Loops. EXC 3. Implement the Fibonacci sequence and display it on the screen.
 {
     {
         Console.Write("Enter Fibonacci Number: ");
@@ -59,8 +59,12 @@ namespace Mod_2_Lesson_8_Task_1_10
         return FibonacciNumber(n - 1) + FibonacciNumber(n - 2);
     }
 }
-
-//Iteration statements EXC 4 Pyramid Pattern
+// Petle. Zad 4. Napisz program, który po podaniu liczby całkowitej wyświetli piramidę liczb od 1 do podanej liczby w formie jak poniżej:
+// 1
+// 23
+// 456
+// 78910
+// Loops. EXC 4. Pyramid Pattern
 {
     Console.Write("Enter a number to make a pyramid: ");
     if (int.TryParse(Console.ReadLine(), out int rows))
@@ -91,3 +95,84 @@ namespace Mod_2_Lesson_8_Task_1_10
     }
     Console.WriteLine();
 }
+// Petle. Zad 6. Napisz program, który dla liczb od 0 do 20 obliczy sumę wg wzoru:1 + ½+ 1/3 + ¼itd.
+// Loops. EXC 6. Calculate the sum for numbers from 0 to 20 according to the formula: 1 + ½ + 1/3 + ¼ etc.
+{
+    decimal sum = 0;
+    for (decimal i = 1; i <= 20; i++)
+    {
+        sum = sum + 1 / i;
+    }
+    Console.WriteLine($"{sum}");
+    Console.WriteLine("");
+}
+// Petle. Zad 7. Napisz program, który dla liczby zadanej przez użytkownika
+// narysuje diament o krótszej przekątnej o długości wprowadzonej przez użytkownika i wg wzoru:
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+//  *******
+//   *****
+//    ***
+//     *
+// Loops. EXC 7. Draw a diamond with a shorter diagonal of the length entered by the user and according to the formula:
+{
+    Console.WriteLine("Enter the diagonal of the diamond: ");
+    if (int.TryParse(Console.ReadLine(), out int totalDiamonds))
+    {
+        int firstRow = 1;
+        if (totalDiamonds % 2 == 0)
+        {
+            firstRow++;
+        }
+        for (int i = firstRow; i <= totalDiamonds; i += 2)
+        {
+            for (int k = (totalDiamonds - i) / 2; k >= 0; k--)
+            {
+                Console.Write(" ");
+            }
+            for (int k = 1; k <= i; k++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+        for (int i = totalDiamonds - 2; i >= firstRow; i -= 2)
+        {
+            for (int k = 0; k < (totalDiamonds - i + 2) / 2; k++)
+            {
+                Console.Write(" ");
+            }
+            for (int k = 1; k <= i; k++)
+            {
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+// Petle. Zad 8. Napisz program, który odwróci wprowadzony przez użytkownika ciąg znaków.
+// Dane testowe:
+// Abcdefg
+// Rezultat
+// Gfedcba
+// Loops. EXC 8. Reverse the string of characters entered above.
+class ReverseString
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Enter a word to reverse: ");
+        string word1 = Console.ReadLine();
+        string word2 = "";
+        for (int a = word1.Length - 1; a >= 0; a--)
+        {
+            word2 += word1[a];
+        }
+        Console.WriteLine(word2);
+        Console.WriteLine("");
+    }
+}
+// Petle. Zad 9. Napisz program, który zamieni liczbę dziesiętną na liczbę binarną.
+// Loops. EXC 9. Convert a decimal number to a binary number.

@@ -1,30 +1,28 @@
-﻿using System;
+﻿
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace Mod_2_Lesson_7_Task_1_13
+Zad 1.
+// Warunki. Zad 1. Napisz program w C#, który stworzy dwie zmienne int i sprawdzi czy są one równe czy nie.
+// Dane testowe:a : 5b : 5
+// Rezultat w terminalu:5 i 5 są równe
+// Conditions. EXC 1. Create two variables int and check whether they are equal or not
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-
-        //Task 1. Create two variables int and check whether they are equal or not.
-
-        {
-            int a = 5;
+    int a = 5;
             int b = 5;
 
             if (a == b)
             {
-                Console.WriteLine($"{a} i {b} They are equal");
+                Console.WriteLine($"{a} and {b} They are equal");
             }
             else
             {
-                Console.WriteLine($"{a} i {b} They aren't equal");
+                Console.WriteLine($"{a} and {b} They aren't equal");
             }
-        }
-    }
 }
-
-//Task 2. Check whether the number is even or odd
+// Warunki. Zad 2. Napisz program w C#, który sprawdzi czy podana przezużytkownika liczba jest parzysta czy nieparzysta
+// Dane testowe : 15
+// Rezultat w terminalu: 15 jest liczbą nieparzystą
+// Conditions. EXC 2. Check whether the number is even or odd
 
 int a = 15;
 
@@ -36,8 +34,10 @@ else
 {
     Console.WriteLine($"{a} the number is odd");
 }
-
-//Task 3. Check whether the number provided by the user is positive or negative.
+// Warunki. Zad 3. Napisz program w C#, który sprawdzi czy podana przezużytkownika liczba jest dodatnia czy ujemna
+// Dane testowe : 14
+// Rezultat w terminalu:14jest liczbą dodatnią
+// Conditions. EXC 3. Check whether the number provided by the user is positive or negative.
 
 {
     Console.WriteLine("Enter a number:");
@@ -56,8 +56,10 @@ else
     {
         Console.WriteLine($"{chosenNumber} You entered a negative number");
     }
-
-    //Task 4. Check if the entered a year is leap.
+    // Warunki. Zad 4. Napisz program w C#, który sprawdzi czy podanyprzezużytkownika rok jest rokiem przestępnym.
+    // Dane testowe : 2016
+    // Rezultat w terminalu: 2016 jest rokiem przestępnym
+    // Conditions. EXC 4. Check if the entered a year is leap.
 
     {
         Console.WriteLine("Enter a Year:");
@@ -74,8 +76,11 @@ else
             Console.WriteLine($"{chosenYear} The Year is not leap");
         }
     }
-
-    //Task 5. Check user age to be MP, Senator, PM or President
+    // Warunki. Zad 5. Napisz program w C#, który sprawdzi czy podany przez użytkownika wiek
+    // uprawnia go do ubiegania się o stanowisko posła, premiera, sentarora, prezydenta.
+    // Dane testowe : 21
+    // Rezultat w terminalu: Możesz zostać posłem
+    // Conditions. EXC 5. Check user age to be MP, Senator, PM or President
 
     {
         Console.WriteLine("Enter your age:");
@@ -101,8 +106,10 @@ else
             Console.WriteLine("You are too young to become: MP ");
         }
     }
-
-    //Task 6. What is your height...
+    // Warunki. Zad 6.Napisz program w C#, który pobierze wzrost użytkownika i przypisze mu wymyśloną kategorię wzrostu.
+    // Dane testowe : 140
+    // Rezultat w terminalu: Jesteś krasnoludem
+    // Conditions. EXC 6. What is your height...
 
     {
         Console.WriteLine("Please enter your height:");
@@ -133,9 +140,15 @@ else
         {
             Console.WriteLine($"{chosenHeight} You are tall ");
         }
+        else
+        {
+            Console.WriteLine($"{chosenHeight}You are a tower");
+        }
     }
-
-    //Task 7. Enter 3 digits and check which is the largest
+    // Warunki. Zad 7. Napisz program w C#, który pobierze 3 liczby od użytkownika i sprawdzi, która jest największa
+    // Dane testowe:256379
+    // Rezultat w terminalu: 79 jest największa z podanych
+    // Conditions. EXC 7. Enter 3 digits and check which is the largest
 
     {
         Console.WriteLine("Please enter first number: ");
@@ -147,11 +160,11 @@ else
         Console.WriteLine("Please enter third number: ");
         decimal third = decimal.Parse(Console.ReadLine());
 
-        if (first > second && first > third)
+        if (first >= second && first > third)
         {
             Console.WriteLine($"{first} is the largest number: ");
         }
-        else if (second > first && second > third)
+        else if (second >= first && second > third)
         {
             Console.WriteLine($"{second} is the largest number: ");
         }
@@ -160,8 +173,10 @@ else
             Console.WriteLine($"{third} is the largest number");
         }
     }
-
-    //Task 8. Check whether the candidate can apply for a place at the university
+    // Warunki. Zad 8. Napisz program, który sprawdzi, czy kandydat może ubiegać się o miejsce na studiach wg.
+    // Następujących kryteriów: Wynik z Matury z matematyki powyżej 70Wynik z fizyki powyżej 55
+    // Wynik z chemii powyżej 45 Łączny wynik z 3 przedmiotów powyżej 180 Albo Wynik z matematyki i jednego przedmiotu powyżej 150
+    // Conditions. EXC 8. Check whether the candidate can apply for a place at the university
 
     {
         Console.WriteLine("Please enter your GCSE Maths score: ");
@@ -188,8 +203,14 @@ else
         else
             Console.WriteLine("Your application was unsuccessful: ");
     }
-
-    //Task 9. What is temperature?
+    // Warunki. Zad 9. Napisz program, który odczyta temperaturęI zwróci nazwę jak w poniższych kryteriach
+    // Temp < 0 –cholernie piździ
+    // Temp 0 –10 –zimno
+    // Temp 10 –20 –chłodno
+    // Temp 20 –30 –w sam raz
+    // Temp 30 –40 –zaczyna być słabo, bo gorąco
+    // Temp >= 40 –a weź wyprowadzam się na Alaskę
+    // Conditions. EXC 9. What is temperature?
 
     {
         Console.WriteLine("Podaj jaka jest temperatura: ");
@@ -220,8 +241,10 @@ else
             Console.WriteLine("a wez wyprowadzam sie na Alaske");
         }
     }
-
-    //Task 10. Check if you can build a triangle?
+    // Warunki. Zad 10. Napisz program, który sprawdzi, czy z 3 podanych długości można stworzyć trójkąt
+    // Dane testowe : 40 55 65
+    // Rezultat w terminalu: Można zbudować trójkąt
+    // Conditions. EXC 10. Check if you can build a triangle?
 
     {
         Console.WriteLine("Enter the length A: ");
@@ -235,27 +258,33 @@ else
 
         if (side_A + side_B > side_C)
         {
-            Console.WriteLine($"{side_A + side_B > side_C} A triangle looks ok ");
+            Console.WriteLine($"{side_A + side_B > side_C} You can built the triangle ");
         }
         else if (side_B + side_C > side_A)
         {
-            Console.WriteLine($"{side_A + side_B > side_C} A triangle looks ok ");
+            Console.WriteLine($"{side_A + side_B > side_C} You can built the triangle ");
         }
         else if (side_A + side_C > side_B)
         {
-            Console.WriteLine($"{side_A + side_B > side_C} A triangle looks ok ");
+            Console.WriteLine($"{side_A + side_B > side_C} You can built the triangle ");
         }
         else
         {
             Console.WriteLine("Unfortunately, you can't build the triangle");
         }
     }
-
-    //Task 11. What is your grade?
+    // Warunki. Zad 11. Napisz program, który zmieni ocenę ucznia na jej opis wg:
+    // 6 Celujący
+    // 5 Bardzo dobry
+    // 4 Dobry
+    // 3 Dostateczny
+    // 2 Dopuszczający
+    // 1 Niedostateczny
+    // Conditions. EXC 11. What is your grade?
 
     Console.WriteLine("Podaj swoją ocenę (1-6): ");
-    byte number;
-    Byte.TryParse(Console.ReadLine(), out number);
+    int number;
+    int.TryParse(Console.ReadLine(), out number);
 
     switch (number)
     {
@@ -281,13 +310,14 @@ else
             break;
     }
 }
-
-//Task 12. Check the number of days
+// Warunki. Zad 12. Napisz program, który pobierze numer dnia tygodnia i wyświetli jego nazwę
+// Dane testowe: 4
+// Conditions. EXC 12. Check the number of days
 
 {
     Console.WriteLine("Enter day number (1-7): ");
-    byte day;
-    Byte.TryParse(Console.ReadLine(), out day);
+    int day;
+    int.TryParse(Console.ReadLine(), out day);
 
     switch (day)
     {
@@ -316,8 +346,11 @@ else
             break;
     }
 }
-
-//Task 12. Calculator
+// Warunki. Zad 13. Napisz program, który będzie posiadał proste menu (wg. Wzoru poniżej) I będzie prostym kalkulatorem.
+// Podaj pierwszą liczbę: ...
+// Podaj drugą liczbę:...
+// Podaj numer operacji do wykonania:1.Dodawanie 2.Odejmowanie 3.Mnożenie 4.Dzielenie...Twój wynik to:
+// Conditions. EXC 13. Calculator
 
 {
     Console.WriteLine("Enter first number A: ");
