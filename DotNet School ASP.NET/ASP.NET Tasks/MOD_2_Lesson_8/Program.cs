@@ -177,7 +177,6 @@ else
     // Następujących kryteriów: Wynik z Matury z matematyki powyżej 70Wynik z fizyki powyżej 55
     // Wynik z chemii powyżej 45 Łączny wynik z 3 przedmiotów powyżej 180 Albo Wynik z matematyki i jednego przedmiotu powyżej 150
     // Conditions. EXC 8. Check whether the candidate can apply for a place at the university
-
     {
         Console.WriteLine("Please enter your GCSE Maths score: ");
         int maths = Int32.Parse(Console.ReadLine());
@@ -187,10 +186,16 @@ else
 
         Console.WriteLine("Please enter your GCSE Chemistry score: ");
         int chemistry = Int32.Parse(Console.ReadLine());
+        int sum = maths + physics + chemistry;
 
-        if (maths + physics + chemistry > 180)
+
+        if (maths > 70 && physics > 55 && chemistry > 45)
         {
             Console.WriteLine($"{maths + physics + chemistry} Your application was successful: ");
+        }
+        else if (sum > 180)
+        {
+            Console.WriteLine($"{sum > 180} Your application was successful: ");
         }
         else if (maths + physics >= 150)
         {
