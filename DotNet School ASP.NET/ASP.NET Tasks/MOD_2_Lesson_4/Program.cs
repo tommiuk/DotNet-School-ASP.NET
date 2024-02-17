@@ -1,12 +1,6 @@
 ﻿using System;
 
 
-namespace Mod_2_Lesson_4_Exc_1
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-
         // Typy danych. Zad 1. Stworz program, w ktorym zadeklarujesz zmienne dotyczace danych pracownika firmy:
         // imie, nazwisko, pesel nr pracownika itp...
         // Data types. EXC 1. Declare variables related to company employee data
@@ -41,10 +35,6 @@ namespace Mod_2_Lesson_4_Exc_1
                 Console.ReadLine();
             }
         }
-    }
-}
-
-
 // Typy danych. Zad 2. Napisz program, w którym stworzysz 3 zmienne z jedną literą,
 // a następnie wypiszesz je w odwrotnej kolejności niż zostały zadeklarowane
 // Data types. EXC 2. Create 3 variables with one letter and then print them in the reverse order from which they were declared.

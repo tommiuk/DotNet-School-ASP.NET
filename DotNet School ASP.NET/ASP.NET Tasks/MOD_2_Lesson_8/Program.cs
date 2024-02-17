@@ -1,7 +1,6 @@
 ﻿
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-Zad 1.
 // Warunki. Zad 1. Napisz program w C#, który stworzy dwie zmienne int i sprawdzi czy są one równe czy nie.
 // Dane testowe:a : 5b : 5
 // Rezultat w terminalu:5 i 5 są równe
