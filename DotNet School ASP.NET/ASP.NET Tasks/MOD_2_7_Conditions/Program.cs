@@ -218,7 +218,7 @@ namespace MOD_2_7_Conditions
                 }
                 else
                 {
-                    Console.WriteLine("Your application was successful: ");
+                    Console.WriteLine("Your application was unsuccessful: ");
                 }
             }
 
