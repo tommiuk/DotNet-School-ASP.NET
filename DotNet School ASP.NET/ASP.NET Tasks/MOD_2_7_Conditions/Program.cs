@@ -15,11 +15,12 @@ namespace MOD_2_7_Conditions
             int varNumberA;
             int varNumberB;
             {
-                do
                 {
-                    Console.WriteLine("Enter variable A and B: ");
+                    Console.WriteLine("Enter variable A ");
+                    varNumberA = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter variable B ");
+                    varNumberB = int.Parse(Console.ReadLine());
                 }
-                while (Int32.TryParse(Console.ReadLine(), out varNumberA) || Int32.TryParse(Console.ReadLine(), out varNumberB));
 
                 if (varNumberA == varNumberB)
                 {
@@ -200,6 +201,7 @@ namespace MOD_2_7_Conditions
             // Conditions. EXC 8. Check whether the candidate can apply for a place at the university
 
             {
+
                 Console.WriteLine("Please enter your GCSE Maths score: ");
                 int maths = Int32.Parse(Console.ReadLine());
 
@@ -210,25 +212,14 @@ namespace MOD_2_7_Conditions
                 int chemistry = Int32.Parse(Console.ReadLine());
                 int sum = maths + physics + chemistry;
 
-
-                if (maths > 70 && physics > 55 && chemistry > 45)
+                if (((maths > 70 && physics > 55 && chemistry > 45) && (maths + physics + chemistry) > 180) || ((maths + physics) > 150 || (maths + chemistry) > 150))
                 {
-                    Console.WriteLine($"{maths + physics + chemistry} Your application was successful: ");
-                }
-                else if (sum > 180)
-                {
-                    Console.WriteLine($"{sum > 180} Your application was successful: ");
-                }
-                else if (maths + physics >= 150)
-                {
-                    Console.WriteLine($"{maths + physics} Your application was successful: ");
-                }
-                else if (maths + chemistry >= 150)
-                {
-                    Console.WriteLine($"{maths + chemistry} Your application was successful: ");
+                    Console.WriteLine("Your application was successful: ");
                 }
                 else
-                    Console.WriteLine("Your application was unsuccessful: ");
+                {
+                    Console.WriteLine("Your application was successful: ");
+                }
             }
 
             // Warunki. Zad 9. Napisz program, który odczyta temperaturęI zwróci nazwę jak w poniższych kryteriach
@@ -317,6 +308,7 @@ namespace MOD_2_7_Conditions
                 int number;
                 int.TryParse(Console.ReadLine(), out number);
 
+
                 switch (number)
                 {
                     case 1:
@@ -338,6 +330,7 @@ namespace MOD_2_7_Conditions
                         Console.WriteLine("Celujący");
                         break;
                     default:
+                        Console.WriteLine("Error");
                         break;
                 }
             }
@@ -375,6 +368,7 @@ namespace MOD_2_7_Conditions
                         Console.WriteLine("Sunday");
                         break;
                     default:
+                        Console.WriteLine("Error");
                         break;
                 }
             }
