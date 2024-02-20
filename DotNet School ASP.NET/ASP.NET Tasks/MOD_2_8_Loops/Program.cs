@@ -186,9 +186,84 @@ namespace MOD_2_8_Loops
                 }
 
                 // Petle. Zad 9. Napisz program, który zamieni liczbę dziesiętną na liczbę binarną.
-                // Loops. EXC 9. Convert a decimal number to a binary number.
+                // Loops. EXC 9. Convert a decimal number to a binary number
 
+                {
+                    Console.WriteLine("Enter a number to convert from decimal to binary: ");
+                    string decimalChoice = Console.ReadLine();
 
+                    int decimalNum = 0;
+
+                    Int32.TryParse(decimalChoice, out decimalNum);
+
+                    string binaryNum = "";
+
+                    for (int i = 1; decimalNum > 0; i++)
+                    {
+                        if (decimalNum % 2 == 0)
+                        {
+                            binaryNum += "0";
+                        }
+                        else
+                        {
+                            binaryNum += "1";
+                        }
+
+                        decimalNum /= 2;
+                    }
+
+                    string newBinary = "";
+
+                    for (int newNumber = binaryNum.Length - 1; newNumber >= 0; newNumber--)
+                    {
+                        newBinary += binaryNum[newNumber];
+                    }
+                    Console.WriteLine(newBinary);
+                }
+
+                // Petle. Zad 10. Napisz program, który znajdzie najmniejszą wspólną wielokrotność dla zadanych 2 liczb.
+                // Loops. EXC 10. Find the least common multiple of two given numbers.
+
+                {
+                    Console.WriteLine("Enter the first number: ");
+                    string firstNumber = Console.ReadLine();
+
+                    Console.WriteLine("Enter the second number: ");
+                    string secondNumber = Console.ReadLine();
+
+                    int firstNum = 0;
+                    int secondNum = 0;
+
+                    Int32.TryParse(firstNumber, out firstNum);
+                    Int32.TryParse(secondNumber, out secondNum);
+
+                    int multiply = firstNum * secondNum;
+
+                    if (firstNum > 0 & secondNum > 0)
+                    {
+                        while (firstNum != secondNum)
+                        {
+                            if (firstNum > secondNum)
+                            {
+                                firstNum -= secondNum;
+                            }
+                            else if (firstNum < secondNum)
+                            {
+                                secondNum -= firstNum;
+                            }
+
+                        }
+
+                        int leastMultiple = multiply / firstNum;
+                        Console.WriteLine($"The least common multiple of two given numbers is: {leastMultiple}");
+
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Error, zero is undefined");
+                    }
+                }
             }
         }
     }
