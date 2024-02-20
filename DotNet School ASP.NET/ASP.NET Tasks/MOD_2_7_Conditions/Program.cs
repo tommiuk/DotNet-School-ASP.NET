@@ -330,7 +330,7 @@ namespace MOD_2_7_Conditions
                         Console.WriteLine("Celujący");
                         break;
                     default:
-                        Console.WriteLine("Error");
+                        Console.WriteLine("Wrong number! Error!");
                         break;
                 }
             }
@@ -368,7 +368,7 @@ namespace MOD_2_7_Conditions
                         Console.WriteLine("Sunday");
                         break;
                     default:
-                        Console.WriteLine("Error");
+                        Console.WriteLine("Wrong number! Error!");
                         break;
                 }
             }
@@ -405,10 +405,18 @@ namespace MOD_2_7_Conditions
                         Console.WriteLine($"Result: {result}");
                         break;
                     case "4":
-                        result = a / b;
-                        Console.WriteLine($"Result: {result}");
+                        if (b != 0)
+                        {
+                            result = a / b;
+                            Console.WriteLine($"Result: {result}");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Division by zero is undefined");
+                        }
                         break;
                     default:
+                        Console.WriteLine("Error");
                         break;
                 }
             }
