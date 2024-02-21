@@ -84,14 +84,18 @@ namespace MOD_2_7_Conditions
 
                 int chosenYear = Int32.Parse(Console.ReadLine());
 
-                if ((chosenYear % 4 == 0 && chosenYear % 100 != 0) || chosenYear % 400 == 0)
+                if (chosenYear < 1582)
                 {
-                    Console.WriteLine($"{chosenYear} The Year is leap");
+                    Console.WriteLine($"{chosenYear} There was no leap year before 1582");
+                }
 
+                else if ((chosenYear % 4 == 0 && chosenYear % 100 != 0) || chosenYear % 400 == 0)
+                {
+                    Console.WriteLine($"{chosenYear} The year is leap");
                 }
                 else
                 {
-                    Console.WriteLine($"{chosenYear} The Year is not leap");
+                    Console.WriteLine($"{chosenYear} The year is not leap");
                 }
             }
 
