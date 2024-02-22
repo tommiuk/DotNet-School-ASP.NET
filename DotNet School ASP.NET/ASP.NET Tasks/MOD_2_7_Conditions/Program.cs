@@ -205,7 +205,6 @@ namespace MOD_2_7_Conditions
             // Conditions. EXC 8. Check whether the candidate can apply for a place at the university
 
             {
-
                 Console.WriteLine("Please enter your GCSE Maths score: ");
                 int maths = Int32.Parse(Console.ReadLine());
 
@@ -214,9 +213,12 @@ namespace MOD_2_7_Conditions
 
                 Console.WriteLine("Please enter your GCSE Chemistry score: ");
                 int chemistry = Int32.Parse(Console.ReadLine());
-                int sum = maths + physics + chemistry;
 
-                if (((maths > 70 && physics > 55 && chemistry > 45) && (maths + physics + chemistry) > 180) || ((maths + physics) > 150 || (maths + chemistry) > 150))
+                if (maths + physics > 150 || maths + chemistry > 150)
+                {
+                    Console.WriteLine("Your application was successful: ");
+                }
+                else if (maths > 70 && physics > 55 && chemistry > 45 && maths + physics + chemistry > 180)
                 {
                     Console.WriteLine("Your application was successful: ");
                 }
