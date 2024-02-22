@@ -38,15 +38,16 @@ namespace MOD_2_7_Conditions
             // Conditions. EXC 2. Check whether the number is even or odd
 
             {
-                int a = 15;
+                Console.WriteLine("Enter a number ");
+                int chosenNumber = int.Parse(Console.ReadLine());
 
-                if (a % 2 == 0)
+                if (chosenNumber % 2 == 0)
                 {
-                    Console.WriteLine($"{a} the number is even");
+                    Console.WriteLine($"{chosenNumber} the number is even");
                 }
                 else
                 {
-                    Console.WriteLine($"{a} the number is odd");
+                    Console.WriteLine($"{chosenNumber} the number is odd");
                 }
             }
 
